@@ -35,9 +35,9 @@ RUN APT_PACKAGES="\
         jupyterlab \
         tensorflow" \
     JUPYTER_CONFIG_DIR=/home/jupyter/.jupyter \
-    && sed -i 's/deb.debian.org/mirrors.tuna.tsinghua.edu.cn/g' /etc/apt/sources.list; \
-    sed -i 's|security.debian.org/debian-security|mirrors.tuna.tsinghua.edu.cn/debian-security|g' /etc/apt/sources.list; \
-    set -ex; \
+    # && sed -i 's/deb.debian.org/mirrors.tuna.tsinghua.edu.cn/g' /etc/apt/sources.list; \
+    # sed -i 's|security.debian.org/debian-security|mirrors.tuna.tsinghua.edu.cn/debian-security|g' /etc/apt/sources.list; \
+    && set -ex; \
     apt-get update -y && apt-get upgrade -y; \
     apt-get install -y --no-install-recommends ${APT_PACKAGES}; \
     pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple -U -V pip; \
