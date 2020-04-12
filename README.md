@@ -1,2 +1,2 @@
-# dockerepo
-The Dockerfiles I used on the desktop and servers
+# Dockerepo
+The Dockerfiles I used on the desktop and servers.

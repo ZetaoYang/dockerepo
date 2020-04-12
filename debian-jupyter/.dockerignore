@@ -1,0 +1,9 @@
+### macOS ###
+*.DS_Store
+.AppleDouble
+.LSOverride
+
+requirements.txt
+docker-compose.yml
+*.pyc
+__pycache__
