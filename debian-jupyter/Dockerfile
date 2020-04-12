@@ -40,9 +40,9 @@ RUN APT_PACKAGES="\
     && set -ex; \
     apt-get update -y && apt-get upgrade -y; \
     apt-get install -y --no-install-recommends ${APT_PACKAGES}; \
-    pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple -U -V pip; \
-    pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple -U -v setuptools wheel; \
-    pip3 --default-timeout=100 install -i https://pypi.tuna.tsinghua.edu.cn/simple -U -v ${PIP_PACKAGES}; \
+    pip3 install -U -V pip; \
+    pip3 install -U -v setuptools wheel; \
+    pip3 --default-timeout=600 install -U -v ${PIP_PACKAGES}; \
     apt-get clean; \
     apt-get autoclean; \
     apt-get autoremove; \
